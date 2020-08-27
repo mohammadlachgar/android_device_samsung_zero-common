@@ -255,6 +255,8 @@ BOARD_SECCOMP_POLICY += device/samsung/zero-common/seccomp
 
 # Sepolicy
 # BOARD_SEPOLICY_DIRS := $(LOCAL_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += device/samsung/zero-common/sepolicy
+#SELINUX_IGNORE_NEVERALLOWS := true
 
 # TWRP
 ifneq ($(strip $(wildcard $(TOP)/bootable/recovery/variables.h)),)

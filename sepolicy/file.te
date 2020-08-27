@@ -1,3 +1,4 @@
+
 ### efs types
 type app_efs_file, file_type;
 type battery_efs_file, file_type;

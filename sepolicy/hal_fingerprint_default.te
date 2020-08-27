@@ -6,3 +6,15 @@ allow hal_fingerprint_default biometrics_data_file:file { write create read rena
 allow hal_fingerprint_default system_data_file:dir { rmdir read write remove_name create open add_name search };
 allow hal_fingerprint_default tee:unix_stream_socket { connectto };
 allow hal_fingerprint_default power_hal_data_files:file rw_file_perms;
+
+
+
+
+
+allow hal_fingerprint_default { tee_device uhid_device }:chr_file rw_file_perms;
+
+allow hal_fingerprint_default keystore:keystore_key add_auth;
+ 
+set_prop(hal_fingerprint_default, system_prop)
+binder_use(hal_fingerprint_default)
+use_keystore(hal_fingerprint_default)

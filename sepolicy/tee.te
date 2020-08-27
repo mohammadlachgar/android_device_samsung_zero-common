@@ -16,3 +16,7 @@ allow tee prov_efs_file:dir search;
 
 allow tee mobicore_data_file:file { create write open };
 allow tee mobicore_data_file:dir { write search add_name create };
+
+allow tee fingerprint_vendor_data_file:dir rw_dir_perms;
+allow tee fingerprint_vendor_data_file:file create_file_perms;
+allow tee fingerprint_vendor_data_file:file rw_file_perms;
