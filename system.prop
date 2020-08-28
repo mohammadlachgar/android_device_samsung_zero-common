@@ -41,12 +41,15 @@ rild.libpath=/system/vendor/lib64/libsec-ril.so
 rild.libpath2=/system/vendor/lib64/libsec-ril-dsds.so 
 telephony.lteOnGsmDevice=1 
 telephony.lteOnCdmaDevice=0 
-ro.telephony.default_network=9 
+ro.telephony.default_network=9 # 9
 ro.use_data_netmgrd=false 
 persist.data.netmgrd.qos.enable=false 
 ro.ril.hsxpa=1 
 ro.ril.telephony.mqanelements=6
 ro.ril.gprsclass=10
+#persist.sys.fflag.override.settings_network_and_internet_v2=true
+#persist.radio.no_wait_for_card=1 #Determines if the phone should wait until the SIM card is ready
+#persist.qcril_uim_vcc_feature=1 # Enable or disable UICC (Universal Integrated Circuit Card) for GSM and UMTS networks
 
 # read single/dual-SIM properties
 import /vendor/etc/properties/radio.prop
